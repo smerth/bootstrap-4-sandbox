@@ -3,14 +3,10 @@
 > Built on Yeoman generator-bootstrap4 with the following additions:
 >
 > 1. grunt-gh-pages to push the dist folder to github pages
-> 2. modified grunt tasks to process additional html pages
-> 3. addition of panini for a fast and simple templating option
 
 ## Yeoman Generator
 
 This Bootstrap 4 Sandbox is based on a Yeoman generator: [Generator Bootstrap4 by bassjobsen](https://github.com/bassjobsen/generator-bootstrap4/)
-
-During the installation for this generator you can choose several configurations.  This sandbox does not use flex, but you can choose that if you want at the time of the install.  Or, modify Bootstrap 4 variables afterwards.
 
 ## Install from the generator
 
@@ -28,9 +24,10 @@ yo bootstrap4
 
 ### Choose options
 
-Choose font-awesome and Octicons - because they are both great icon libraries...
+During the installation for this generator you can choose several configurations:
 
-Enable flexbox
+1. Choose font-awesome and Octicons - because they are both great icon libraries...
+2. Enable flexbox
 
 
 
@@ -71,6 +68,20 @@ This builds the app from the app folder and runs the Mocha test suite.
 Leave this terminal window open to keep tests running in the background.
 
 **Testing Note**: a project checked into source control and later checked out needs to have ```bower install``` run from the test folder as well as from the project root.
+
+That's what it says in the docs for the generator but there isn't a package.json file in the test folder, so don't know what that is about...
+
+However, after downloading and installing from this repo (as opposed to using the generator) I kept having a complaint from grunt
+
+```>> Local Npm module "grunt-cafe-mocha" not found. Is it installed?```
+
+which I fixed with
+
+```bash
+npm install grunt-cafe-mocha --save-dev
+```
+
+Not sure why that isn't covered in the generator...
 
 ### Serve the dev environment
 
@@ -216,69 +227,11 @@ git commit -m "first commit"
 
 
 
+## Processing HTML additional pages
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Run the app in development mode
-
-```bash
-grunt serve
-```
-
-
-
-
-
-
-
-When developing serve the app folder which also runs grunt watch
-
-To serve the app
-
-grunt serve
-
-To serve the dist folder
-
-grunt serve:dist
-
-To delploy to github pages
-
-gulp deploy
-
-
-
-Code in the app folder...
-
-File structure
-
-
-
-
-
-Install Bower dependancies
-
-```bash
-bower install
-```
-
-
-
-Grunt and Gulp
 
