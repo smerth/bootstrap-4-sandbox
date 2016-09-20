@@ -143,7 +143,7 @@ enable (require) the plugin
 
 @ Gruntfile.js
 
-```json
+```javascript
 module.exports = function (grunt) {
 
   // load module
@@ -158,7 +158,7 @@ Add task to deploy the dist folder to gh-pages
 
 @ Gruntfile.js
 
-```json
+```javascript
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -182,7 +182,7 @@ Add task to deploy the dist folder to gh-pages
 
 Edit .gitignor
 
-```yaml
+```txt
 # Apple stuff
 .DS_Store
 .tmp
