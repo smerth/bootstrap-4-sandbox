@@ -1,8 +1,10 @@
-# Bootstrap4 Sandbox 
+# Bootstrap4 Sandbox
 
 > Built on Yeoman generator-bootstrap4 with the following additions:
 >
 > 1. grunt-gh-pages to push the dist folder to github pages
+
+![App Screenshot](https://raw.githubusercontent.com/smerth/bootstrap-4-sandbox/master/screenshot.png)
 
 ## Yeoman Generator
 
@@ -29,8 +31,6 @@ During the installation for this generator you can choose several configurations
 1. Choose font-awesome and Octicons - because they are both great icon libraries...
 2. Enable flexbox
 
-
-
 ## Install from this repo
 
 ```bash
@@ -55,8 +55,6 @@ npm install
 bower install
 ```
 
-
-
 ### Build the App
 
 ```bash
@@ -67,13 +65,13 @@ This builds the app from the app folder and runs the Mocha test suite.
 
 Leave this terminal window open to keep tests running in the background.
 
-**Testing Note**: a project checked into source control and later checked out needs to have ```bower install``` run from the test folder as well as from the project root.
+**Testing Note**: a project checked into source control and later checked out needs to have `bower install` run from the test folder as well as from the project root.
 
 That's what it says in the docs for the generator but there isn't a package.json file in the test folder, so don't know what that is about...
 
 However, after downloading and installing from this repo (as opposed to using the generator) I kept having a complaint from grunt
 
-```>> Local Npm module "grunt-cafe-mocha" not found. Is it installed?```
+`>> Local Npm module "grunt-cafe-mocha" not found. Is it installed?`
 
 which I fixed with
 
@@ -123,9 +121,7 @@ Stop the server ctl-c. and restart...
 grunt serve:dist
 ```
 
-Remember if you are pushing the dist folder to github pages using ```grunt-gh-pages``` you need to rebuild the dist folder before pushing to github.
-
-
+Remember if you are pushing the dist folder to github pages using `grunt-gh-pages` you need to rebuild the dist folder before pushing to github.
 
 ## Pushing to Github Pages
 
@@ -148,11 +144,9 @@ module.exports = function (grunt) {
 
   // load module
   require('grunt-gh-pages')(grunt);
-  
+
   ...
 ```
-
-
 
 Add task to deploy the dist folder to gh-pages
 
@@ -172,11 +166,9 @@ Add task to deploy the dist folder to gh-pages
       },
       src: ['**']
     },
-    
+
     ...
 ```
-
-
 
 ### Setup Git
 
@@ -205,19 +197,17 @@ Initialize git
 git init
 ```
 
-and 
+and
 
 ```bash
 git add .
 ```
 
-and 
+and
 
 ```bash
 git commit -m "first commit"
 ```
-
-
 
 ### Push dist to gh-pages
 
@@ -225,13 +215,4 @@ git commit -m "first commit"
  grunt gh-pages
 ```
 
-
-
 ## Processing HTML additional pages
-
-
-
-
-
-
-
